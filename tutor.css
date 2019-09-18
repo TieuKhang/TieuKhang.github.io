@@ -1,14 +1,14 @@
 #titlebackground{
 	border-top:1px #CCCCCc solid; 
 	background-color:green;
-	width:100%;
+	width:50%;
 	height:150px;
 }
 .title{
 	color:white;
 	position:relative;
 	left:250px;
-	font-size:90px;
+	font-size:30px;
 	top:-50px;
 }
 #intro{
