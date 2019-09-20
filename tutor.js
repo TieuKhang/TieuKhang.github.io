@@ -63,4 +63,4 @@ document.getElementById("disalp").onclick = function()
 		stat =false;
 	}
 }
-traloi("bgt1","gt1","My name is ...");
+traloi("bgt1","gt1","My name is...");
