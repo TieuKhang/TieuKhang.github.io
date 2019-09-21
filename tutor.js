@@ -3,7 +3,8 @@ function traloi(butt,quest,dapan)
 {
 	document.getElementById(butt).onclick = function()
 	{
-		var pivot = document.getElementById(quest).value;
+		var pivot="";
+		pivot = document.getElementById(quest).value;
 		if (pivot==dapan)
 		{
 			alert("Chính xác!");
