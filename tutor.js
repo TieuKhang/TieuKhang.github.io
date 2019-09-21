@@ -1,4 +1,3 @@
-
 var x=0;
 function traloi(butt,quest,dapan)
 {
