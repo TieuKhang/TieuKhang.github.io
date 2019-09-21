@@ -1,19 +1,4 @@
-var stat=false;
-document.getElementById("disalp").onclick = function()
-{
-	if (stat==false)
-	{
-		document.getElementById("alp").style.display= "none";
-		document.getElementById("disalp").innerHTML = "Hiển thị";
-		stat = true;
-	}
-	else
-	{
-		document.getElementById("alp").style.display= "block";
-		document.getElementById("disalp").innerHTML = "Ẩn bớt";
-		stat =false;
-	}
-}
+
 var x=0;
 function traloi(butt,quest,dapan)
 {
@@ -63,5 +48,20 @@ traloi("click23","cau23","bi");
 traloi("click24","cau24","xi");
 traloi("click25","cau25","ey");
 traloi("click26","cau26","éx");
-
+var stat=false;
+document.getElementById("disalp").onclick = function()
+{
+	if (stat==false)
+	{
+		document.getElementById("alp").style.display= "none";
+		document.getElementById("disalp").innerHTML = "Hiển thị";
+		stat = true;
+	}
+	else
+	{
+		document.getElementById("alp").style.display= "block";
+		document.getElementById("disalp").innerHTML = "Ẩn bớt";
+		stat =false;
+	}
+}
 traloi("bgt1","gt1","My name is...");
