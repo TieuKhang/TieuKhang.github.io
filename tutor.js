@@ -18,9 +18,13 @@ function traloi(butt,quest,dapan)
 		}
 	}
 }
-document.getElementById("mark").onclick = function()
+
+function grading(mbt)
 {
-	alert("Bạn được " + x + " điểm ");
+	document.getElementById(mbt).onclick = function()
+	{
+		alert("Bạn được " + x + " điểm ");
+	}
 }
 traloi("click1","cau1","tray");
 traloi("click2","cau2","kiu");
@@ -48,20 +52,34 @@ traloi("click23","cau23","bi");
 traloi("click24","cau24","xi");
 traloi("click25","cau25","ey");
 traloi("click26","cau26","éx");
-var stat=false;
-document.getElementById("disalp").onclick = function()
+grading("mark");
+function dpb(db,idb)
 {
-	if (stat==false)
-	{
-		document.getElementById("alp").style.display= "none";
-		document.getElementById("disalp").innerHTML = "Hiển thị";
-		stat = true;
-	}
-	else
-	{
-		document.getElementById("alp").style.display= "block";
-		document.getElementById("disalp").innerHTML = "Ẩn bớt";
-		stat =false;
-	}
+    var stat=false;
+    document.getElementById(db).onclick = function()
+    {
+    	if (stat===false)
+    	{
+    		document.getElementById(idb).style.display= "none";
+    		document.getElementById(db).innerHTML = "Hiển thị";
+    		stat = true;
+    	}
+    	else
+    	{
+    		document.getElementById(idb).style.display= "block";
+    		document.getElementById(db).innerHTML = "Ẩn bớt";
+    		stat =false;
+    	}
+    }
 }
+dpb("disalp","alp");
+dpb("dissein","sein");
+
 traloi("bgt1","gt1","My name is Nam");
+traloi("bgt2","gt2","I am 10 years old");
+traloi("bgt3","gt3","I am from Viet Nam");
+traloi("bgt4","gt4","How are you?");
+traloi("bgt5","gt5","What's your name?");
+traloi("bgt6","gt6","Where are you from?");
+traloi("bgt7","gt7","How old are you?");
+grading("intmark");
