@@ -75,11 +75,28 @@ function dpb(db,idb)
 dpb("disalp","alp");
 dpb("dissein","sein");
 
-traloi("bgt1","gt1","My name is Nam");
-traloi("bgt2","gt2","I am 10 years old");
-traloi("bgt3","gt3","I am from Viet Nam");
-traloi("bgt4","gt4","How are you?");
-traloi("bgt5","gt5","What's your name?");
-traloi("bgt6","gt6","Where are you from?");
-traloi("bgt7","gt7","How old are you?");
-grading("intmark");
+// traloi("bgt1","gt1","My name is Nam");
+// traloi("bgt2","gt2","I am 10 years old");
+// traloi("bgt3","gt3","I am from Viet Nam");
+// traloi("bgt4","gt4","How are you?");
+// traloi("bgt5","gt5","What's your name?");
+// traloi("bgt6","gt6","Where are you from?");
+// traloi("bgt7","gt7","How old are you?");
+// grading("intmark");
+
+document.getElementById(butt).onclick = function()
+{
+	var pivot="";
+	pivot = document.getElementById(quest).value;
+	if (pivot==dapan)
+	{
+		alert("Chính xác!");
+		x++;
+		document.getElementById(butt).style.display = "none";
+	}
+	else
+	{
+		alert("Không chính xác!");
+		document.getElementById(butt).style.display = "none";
+	}
+}
