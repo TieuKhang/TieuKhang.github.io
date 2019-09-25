@@ -84,15 +84,14 @@ dpb("dissein","sein");
 // traloi("bgt7","gt7","How old are you?");
 // grading("intmark");
 
-document.getElementById(butt).onclick = function()
+document.getElementById("bgt1").onclick = function()
 {
 	var pivot="";
-	pivot = document.getElementById(quest).value;
-	if (pivot==dapan)
+	pivot = document.getElementById("gt1").value;
+	if (pivot=="My name is Nam")
 	{
 		alert("Chính xác!");
-		x++;
-		document.getElementById(butt).style.display = "none";
+		// document.getElementById().style.display = "none";
 	}
 	else
 	{
