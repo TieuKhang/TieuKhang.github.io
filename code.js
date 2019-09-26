@@ -1,7 +1,7 @@
 var kCount = 2;
 
 function reset_col(elim) {
-    for (var i = 1; i < kCount + 1; ++i) {
+    for (var i = 1; i <= kCount; ++i) {
         var name = "le" + i.toString();
         document.getElementById(name).style.backgroundColor = "#565d69"
     }
