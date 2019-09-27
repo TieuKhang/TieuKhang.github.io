@@ -21,7 +21,7 @@ function setRandom()
 	s = Math.floor(Math.random() * 4);
 	n = Math.floor(Math.random() * 10);
 	makeShapeAppear(shape[s],shapeid[s],color[c],num[n]);
-	pivot=shape[s];
+	pivot=shapeid[s];
 	console.log(shape[s]);
 	console.log(color[c]);
 	console.log(num[n]);
@@ -34,19 +34,21 @@ function afterAppear()
 		x = document.getElementById("shapee").value;
 		y = document.getElementById("coloree").value;
 		z = document.getElementById("numberee").value;
-	
+		console.log(pivot);
 		if (x==shape[s] && y==color[c] && z==numwo[n])
 		{
 			alert("Chính xác!");
-			document.getElementById(pivot).style.display="none";
-			setTimeout(setRandom(), Math.random() * 2000);
 		}
 		else
 		{
 			alert("Ko chính xác!");
-			document.getElementById(pivot).style.display="none";
-			setTimeout(setRandom(), Math.random() * 2000);
 		}
+		for (var i=0;i<num[n]-1;++i)
+		{
+			$(pivot).remove();
+		}
+		document.getElementById(shape[s]).style.display="none";
+		setTimeout(setRandom(), Math.random() * 2000);
 	}
 }
 setRandom();
