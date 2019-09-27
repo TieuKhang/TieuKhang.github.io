@@ -5,6 +5,7 @@ shapeid=["#circle","#triangle","#rectangle","#square"];
 num=[1,2,3,4,5,6,7,8,9,10];
 numwo=["one","two","three","four","five","six","seven","eight","nine","ten"];
 var c,s,n;
+var pivot;
 function makeShapeAppear(sh,shid,co,nu)
 {
 	document.getElementById(sh).style.backgroundColor=co;
@@ -20,6 +21,7 @@ function setRandom()
 	s = Math.floor(Math.random() * 4);
 	n = Math.floor(Math.random() * 10);
 	makeShapeAppear(shape[s],shapeid[s],color[c],num[n]);
+	pivot=shape[s];
 	console.log(shape[s]);
 	console.log(color[c]);
 	console.log(num[n]);
@@ -36,11 +38,13 @@ function afterAppear()
 		if (x==shape[s] && y==color[c] && z==numwo[n])
 		{
 			alert("Chính xác!");
+			document.getElementById(pivot).style.display="none";
 			setTimeout(setRandom(), Math.random() * 2000);
 		}
 		else
 		{
 			alert("Ko chính xác!");
+			document.getElementById(pivot).style.display="none";
 			setTimeout(setRandom(), Math.random() * 2000);
 		}
 	}
