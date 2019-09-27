@@ -23,17 +23,24 @@
 	left:100px;
 	font-size: 70px;
 }
-#link{
-	font-size:25px;
-	color:black;
+#circle{		
+  border-radius: 50%;
+  width:100px;
+  height:100px;
 }
-#alphabet{
-	font-size:30px;
-	color:black;
+#square {
+  height: 50px;
+  width: 50px;
 }
-#alphaimg{
-	position: relative;
-	width:250px;
-	height:250px;
-	left:100px;;
+
+#rectangle {
+  height: 50px;
+  width: 100px;
+}
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 25px solid #555;
+	border-right: 25px solid #555;
+	border-bottom: 50px solid transparent;
 }

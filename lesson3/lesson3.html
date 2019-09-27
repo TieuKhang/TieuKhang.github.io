@@ -2,31 +2,66 @@
 <html>
     <head>
         <title> tienganh</title>
-        <link rel="stylesheet" type= "text/css" href="tutoring.css">
+        <link rel="stylesheet" type= "text/css" href="tutoring3.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     </head>
     <body>
         <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
         <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
         <META HTTP-EQUIV="Content-language" CONTENT="vi">
-        <h1 id="intro"> 3/Từ vựng cơ bản </h1>
-        <button id="dissein"> Ẩn bớt </button>
-        <div id="sein">
-            <h1 id="major"> Bài học </h1>        
-            <a href=".odp"> Bấm vào đây để học cách giới thiệu bản thân</a>
-            <h1 id="major"> Bài tập </h1>    
-            <div>
-                <p>Trả lời các câu hỏi sau(không viết tắt):</p>
-                <p> Câu 1/ Tên tôi là Nam.<input type="text" id="gt1"> <button id="bgt1">trả lời</button> </p>
-                <p> Câu 2/ Tôi được 10 tuổi rồi.<input type="text" id="gt2"> <button id="bgt2">trả lời</button> </p>
-                <p> Câu 3/ Tôi từ Việt Nam.<input type="text" id="gt3"> <button id="bgt3">trả lời</button> </p>
-                <p> Câu 4/ Bạn khỏe không?<input type="text" id="gt4"> <button id="bgt4">trả lời</button> </p>
-                <p> Câu 5/ Tên bạn là gì?<input type="text" id="gt5"> <button id="bgt5">trả lời</button> </p>
-                <p> Câu 6/ Bạn đến từ đâu? <input type="text" id="gt6"> <button id="bgt6">trả lời</button></p>
-                <p> Câu 7/ Bạn mấy tuổi? <input type="text" id="gt7"> <button id="bgt7">trả lời</button></p>
-            </div>
-            <button id="intmark"> Coi điểm </button>
-        </div>
-    </div>
+		<h1 id="intro"> 3/Từ vựng cơ bản </h1>
+		<h1 id="major"> Bài học </h1>        
+		<p> <a href="basic color+shape.odp"> Bấm vào đây để học màu sắc + các hình cơ bản</a> </p>
+		<p> <a href="number(1-30).odp"> Bấm vào đây để học cách đếm số trong tiếng anh</a> </p>
+		<h1 id="major"> Bài tập </h1>   
+		<!-- DISPLAYED SHAPE-->	
+		<div id="shape">
+			<p id="circle"></p>
+			<p id="square"></p>
+			<p id="rectangle"></p>
+			<p id="triangle"></p>
+		</div>
+		<!-- QUESTION-->
+		<div id="ques">
+			<p> Màu sắc
+				<select id="coloree">
+					<option>red</option>
+					<option>orange</option>
+					<option>green</option>
+					<option>blue</option>
+					<option>yellow</option>
+					<option>pink</option>
+					<option>brown</option>
+					<option>black</option>
+					<option>white</option>
+					<option>purple</option>
+					<option>grey</option>		
+				</select>
+			</p>
+			<p> Hình dạng
+				<select id="shapee">
+					<option>circle</option>
+					<option>square</option>
+					<option>rectangle</option>
+					<option>triangle</option>
+				</select>
+			</p>
+			<p> Số lượng
+				<select id="numberee">
+					<option>one</option>
+					<option>two</option>
+					<option>three</option>
+					<option>four</option>
+					<option>five</option>
+					<option>six</option>
+					<option>seven</option>
+					<option>eight</option>
+					<option>nine</option>
+					<option>ten</option>
+				</select>
+			</p>
+			<button id="ans"> trả lời</button>
+		</div>
     </body>
-    <script type="text/javascript" src="tutor.js"></script>
+    <script type="text/javascript" src="tutor3.js"></script>
 </html>
