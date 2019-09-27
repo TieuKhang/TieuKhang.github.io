@@ -7,3 +7,7 @@ document.getElementById("le2").onclick = function()
 {
     document.getElementById("frmshow").src = "lesson2/lesson2.html";
 }
+document.getElementById("le3").onclick = function()
+{
+    document.getElementById("frmshow").src = "lesson3/lesson3.html";
+}
