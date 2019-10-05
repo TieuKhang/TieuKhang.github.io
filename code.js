@@ -1,4 +1,4 @@
-var kCount = 4;
+var kCount = 5;
 
 function reset_col(elim) {
     for (var i = 1; i <= kCount; ++i) {
@@ -28,4 +28,9 @@ document.getElementById("le4").onclick = function()
 {
     document.getElementById("frmshow").src = "lesson4/lesson4.html";
 	reset_col("le4");
+}
+document.getElementById("le5").onclick = function()
+{
+    document.getElementById("frmshow").src = "lesson5/lesson5.html";
+	reset_col("le5");
 }
