@@ -43,7 +43,7 @@ for (var i = 0; i < n; ++i) {
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.setAttribute("href", url);
-    li.appendChild(document.createTextNode(title));
+    a.appendChild(document.createTextNode(title));
     li.appendChild(a);
     ul.appendChild(li);
 }
