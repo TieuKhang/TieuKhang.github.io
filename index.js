@@ -1,34 +1,49 @@
 document.getElementById("btntoggle").onclick = function() {
-    if (document.getElementById("sidebar").style.marginLeft == "-300px") {
+    if (document.getElementById("sidebar").style.marginLeft == "-270px") {
         document.getElementById("sidebar").style.marginLeft = "0px";
     } else {
-        document.getElementById("sidebar").style.marginLeft = "-300px";
+        document.getElementById("sidebar").style.marginLeft = "-270px";
     }
     if (document.getElementById("content").style.paddingLeft == "10px") {
-        document.getElementById("content").style.paddingLeft = "310px";
+        document.getElementById("content").style.paddingLeft = "280px";
     } else {
         document.getElementById("content").style.paddingLeft = "10px";
     }
 }
 
-function loadXMLDoc() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-    }
-  };
-  xmlhttp.open("GET", "index.xml" , true);
-  xmlhttp.send();
-}
+var text, parser, xmlDoc;
+text = "<index>" +
+"<lesson>" +
+"<title>Bảng chữ cái</title>" +
+"<url>#</url>" +
+"</lesson>" +
+"<lesson>" +
+"<title>Giao tiếp cơ bản</title>" +
+"<url>#</url>" +
+"</lesson>" +
+"<lesson>" +
+"<title>Từ vựng cơ bản</title>" +
+"<url>#</url>" +
+"</lesson>" +
+"<lesson>" +
+"<title>Động từ - Tính từ cơ bản</title>" +
+"<url>#</url>" +
+"</lesson>" +
+"</index>";
 
-function myFunction(xml) {
-  var x, i, xmlDoc, table;
-  xmlDoc = xml.responseXML;
-  x = xmlDoc.getElementsByTagName("index");
-  for (i = 0; i < x.length; i++) { 
-    var name = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-    var url = x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue;
-    alert(name + " " + url);
-  }
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text, "text/xml");
+
+var n = xmlDoc.getElementsByTagName("title").length;
+
+for (var i = 0; i < n; ++i) {
+    var title = xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue;
+    var url = xmlDoc.getElementsByTagName("url")[i].childNodes[0].nodeValue;
+    var ul = document.getElementById("lessonList");
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.setAttribute("href", url);
+    li.appendChild(document.createTextNode(title));
+    li.appendChild(a);
+    ul.appendChild(li);
 }
