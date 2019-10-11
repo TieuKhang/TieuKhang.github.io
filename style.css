@@ -34,7 +34,7 @@
     list-style-type: none;
 }
 
-#sidebar.li {
+li {
     position: relative;
     width: 100%;
     color: white;
@@ -42,7 +42,7 @@
     transition: all 0.3s;
 }
 
-#sidebar.li:hover {
+li:hover {
     position: relative;
     background-color: #43454a;
     text-align: right;
