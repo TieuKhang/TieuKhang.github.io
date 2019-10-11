@@ -16,7 +16,6 @@ text = "<index>" +
 "<lesson>" +
 "<title>Bảng chữ cái</title>" +
 "<url>https://www.google.com/</url>" +
-"<url>#</url>" +
 "</lesson>" +
 "<lesson>" +
 "<title>Giao tiếp cơ bản</title>" +
@@ -34,7 +33,9 @@ text = "<index>" +
 
 parser = new DOMParser();
 xmlDoc = parser.parseFromString(text, "text/xml");
+
 var n = xmlDoc.getElementsByTagName("title").length;
+
 for (var i = 0; i < n; ++i) {
     var title = xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue;
     var url = xmlDoc.getElementsByTagName("url")[i].childNodes[0].nodeValue;
