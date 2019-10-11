@@ -1,61 +1,79 @@
-/* Default font */
-.defaultfont { font-family: Source Sans Pro, sans-serif; }
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-/* Split the screen in half */
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
+#sidebar {
     top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-  
-/* Control the left side */
-.panel {
-    left: 0;
     background-color: #565d69;
     height: 100%;
-    width: 20%;
+    width: 300px;
+    margin-left: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    transition: all 0.3s;
+    font-family: 'Roboto', sans-serif;
 }
-  
-/* Control the right side */
-.content {
-    right: 0;
+
+#content {
+    top: 0;
     background-color: whitesmoke;
     height: 100%;
-    width: 80%;
+    width: 100%;
     position: fixed;
-    z-index: 1;
-    top: 0;
+    z-index: 0;
     overflow-x: hidden;
-    padding-top: 20px;
-}
-  
-/* If you want the content centered horizontally and vertically */
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-  
-.btn {
-    border: none; /* Remove borders */
-    color: white; /* Add a text color */
-    padding: 14px 28px; /* Add some padding */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    padding-left: 310px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    font-family: 'Roboto', sans-serif;
 }
 
-.pitem {
-    background-color: #565d69;
-    width: 100%
+#lessonList {
+    padding: 0;
+    list-style-type: none;
 }
-.pitem:hover {background-color: #8b9ab3;}
+
+li {
+    position: relative;
+    width: 100%;
+    color: white;
+    padding: 10px;;
+}
+
+li:hover {
+    position: relative;
+    background-color: #43454a;
+}
+
+a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+a:hover {
+    color: white;
+    TEXT-DECORATION: none;
+    font-weight: none
+}
+
+.mybtn {
+    border-color: gray;
+    border-thickness: 5;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -300px;
+    }
+    
+    #content {
+        padding-left: 10px;
+    }
+}

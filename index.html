@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Học tiếng anh</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="favicon-16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Học tiếng Anh</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<div class="panel">
-    <div class="defaultfont" style="color: whitesmoke; text-align: center">
-        <img style="border-radius: 50%; border: 3px solid white;" height="100" src="https://i.pinimg.com/originals/1d/b3/88/1db388f5ad379329887868ea47fa8651.jpg" alt="Avatar">
-        <h2>Học tiếng anh</h2>
-    </div>
-    <div class="defaultfont" style="background-color:#565d69">
-        <button id="le1" class="btn pitem"><h3> 1/ Bảng chữ cái</h3></button>
-        <button id="le2" class="btn pitem"><h3> 2/ Giao tiếp cơ bản</h3></button>
-        <button id="le3" class="btn pitem"><h3> 3/ Từ vựng cơ bản </h3></button>
-		<button id="le4" class="btn pitem"><h3> 4/ Động từ - Tính từ cơ bản </h3></button>
-		<button id="le5" class="btn pitem"><h3> 5/ Ngữ pháp cơ bản </h3></button>
-      <!--   <button class="btn pitem"><h3>Introduction4</h3></button>
-        <button class="btn pitem"><h3>Introduction5</h3></button>
-        <button class="btn pitem"><h3>Introduction6</h3></button>
-        <button class="btn pitem"><h3>Introduction7</h3></button>
-        <button class="btn pitem"><h3>Introduction8</h3></button>
-        <button class="btn pitem"><h3>Introduction9</h3></button> -->
-    </div>
-</div>
+<body>
+    <div id="sidebar">
+        <div style="background-color: #474e59; color: whitesmoke; padding: 20px; font-family: 'Pacifico', cursive; text-align: center;">
+            <!-- <img style="border-radius: 50%; border: 3px solid white;" height="100" src="https://i.pinimg.com/originals/1d/b3/88/1db388f5ad379329887868ea47fa8651.jpg" alt="Avatar"> -->
+            <!-- <br></br> -->
+            <h2>Học tiếng Anh</h2>
+        </div>
     
-<div class="content" style="font-family: Source Sans Pro, sans-serif;">
-    <iframe id="frmshow" src="welcome.html" width="100%" height="95%" style="border-style: none;">
-    </iframe>
-</div>
-<script type="text/javascript" src="code.js"></script>
+        <div style="margin-top: 10px; text-align: center; color: white;">
+            <h4>Bài học</h4>
+        </div>
+        
+        <ul id="lessonList"></ul>
+            <li>
+                <a href="#">Home 1</a>
+            </li>
+        </ul>
+    </div>
+        
+    <div id="content">
+        <div style="margin-bottom: 10px;">
+            <button id="btntoggle" type="button" class="btn mybtn">Toggle</button>
+            <button id="btnload" type="button" class="btn mybtn" onclick="loadXMLDoc()">Load</button>
+        </div>
+        <h1>Chào mừng!</h1>
+        <p>Đây là website chứa nội dung và bài tập học tiếng Anh cho một dự án cộng đồng.</p>
+        <p>Chọn bài học ở thanh bên trái. Mỗi bài học có bài tập luyện tập kèm theo.</p>
+        <br></br>
+        <p>@2019</p>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>
