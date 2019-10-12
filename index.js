@@ -15,6 +15,8 @@ var text, parser, xmlDoc;
 text = "<index>" +
 "<lesson>" +
 "<title>Bảng chữ cái</title>" +
+"<url>https://www.google.com/</url>" +
+"<url>#</url>" +
 "<url>https://tieukhang.github.io/lesson1/lesson1.html</url>" +
 "</lesson>" +
 "<lesson>" +
