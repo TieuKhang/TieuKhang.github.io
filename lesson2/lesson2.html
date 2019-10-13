@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> englishcommunication </title>
-        <link rel="stylesheet" type= "text/css" href="tutoring.css">
-    </head>
-    <body>
-        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
-        <META HTTP-EQUIV="Content-language" CONTENT="vi">
-        <h1 id="intro"> 2/Giao tiếp cơ bản </h1>
-        <div id="sein">
-            <h1 id="major"> Bài học </h1>        
-            <a href="basic greeting.odp"> Bấm vào đây để học cách giới thiệu bản thân</a>
-            <h1 id="major"> Bài tập </h1>    
-            <div>
-                <p>Dịch các câu sau(không viết tắt):</p>
-                <p> Câu 1/ Tên tôi là Nam.<input type="text" id="gt1"> <button id="bgt1">trả lời</button> </p>
-                <p> Câu 2/ Tôi được 10 tuổi rồi.<input type="text" id="gt2"> <button id="bgt2">trả lời</button> </p>
-                <p> Câu 3/ Tôi từ Việt Nam.<input type="text" id="gt3"> <button id="bgt3">trả lời</button> </p>
-                <p> Câu 4/ Bạn khỏe không?<input type="text" id="gt4"> <button id="bgt4">trả lời</button> </p>
-                <p> Câu 5/ Tên bạn là gì?<input type="text" id="gt5"> <button id="bgt5">trả lời</button> </p>
-                <p> Câu 6/ Bạn đến từ đâu? <input type="text" id="gt6"> <button id="bgt6">trả lời</button></p>
-                <p> Câu 7/ Bạn mấy tuổi? <input type="text" id="gt7"> <button id="bgt7">trả lời</button></p>
-            </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Học tiếng Anh</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://tieukhang.github.io/style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sidebar">
+        <a href="https://tieukhang.github.io/">
+        <div style="background-color: #474e59; color: whitesmoke; padding: 20px; font-family: 'Pacifico', cursive; text-align: center;">
+            <!-- <img style="border-radius: 50%; border: 3px solid white;" height="100" src="https://i.pinimg.com/originals/1d/b3/88/1db388f5ad379329887868ea47fa8651.jpg" alt="Avatar"> -->
+            <!-- <br></br> -->
+            <h2>Học tiếng Anh</h2>
+        </div>
+        </a>
+    
+        <div style="margin-top: 10px; text-align: center; color: white;">
+            <h4>---Mục lục---</h4>
+        </div>
+        
+        <ul id="lessonList"></ul>
+            <!-- <li> -->
+                <!-- <a href="#">Home 1</a> -->
+            <!-- </li> -->
+        </ul>
+    </div>
+        
+    <div id="content">
+        <div style="margin-bottom: 10px;">
+            <button id="btntoggle" type="button" class="btn mybtn">Toggle</button>
+        </div>
+        
+        <h1>Giao tiếp cơ bản</h1> <br>
+        
+        <div style="width: 300px; border-style: solid; border-width: thin; border-color: black; padding: 10px; margin-bottom: 10px;">
+            <p style="text-align: center; margin-bottom: 2px;">Chuyển hướng</p>
+            <a href="#lecture">1. Bài học</a>
+            <br>
+            <a href="#homework">2. Bài tập</a>
+        </div>
+        
+        <br>
+        
+        <div id="lecture">
+            <h3>Bài học</h3>
+            <hr>
+			<a href="basic greeting.odp"> Bấm vào đây để học cách giới thiệu bản thân</a>
+        </div> <br>
+        
+        <div id="homework">
+            <h3>Bài tập</h3>
+            <hr>
+            <iframe src="homework/form2.html" height="400px" width="500px"></iframe> 
         </div>
     </div>
-    </body>
-    <script type="text/javascript" src="tutor2.js"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>

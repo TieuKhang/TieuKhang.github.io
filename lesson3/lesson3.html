@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> tienganh</title>
-        <link rel="stylesheet" type= "text/css" href="tutoring3.css">
-		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    </head>
-    <body>
-        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
-        <META HTTP-EQUIV="Content-language" CONTENT="vi">
-		<h1 id="intro"> 3/Từ vựng cơ bản </h1>
-		<h1 id="major"> Bài học </h1>        
-		<p> <a href="basic color+shape.odp"> Bấm vào đây để học màu sắc + các hình cơ bản</a> </p>
-		<p> <a href="number(1-30).odp"> Bấm vào đây để học cách đếm số trong tiếng anh</a> </p>
-		<h1 id="major"> Bài tập </h1>   
-		<!-- DISPLAYED SHAPE-->	
-		<p> Trò chơi: trả lời các đặc tính của hình được đưa ra<p>
-		<div id="shape">
-			<p id="circle"></p>
-			<p id="square"></p>
-			<p id="rectangle"></p>
-			<p id="triangle"></p>
-		</div>
-		<!-- QUESTION-->
-		<div id="ques">
-			<p> Màu sắc
-				<select id="coloree">
-					<option>red</option>
-					<option>orange</option>
-					<option>green</option>
-					<option>blue</option>
-					<option>yellow</option>
-					<option>pink</option>
-					<option>brown</option>
-					<option>black</option>
-					<option>white</option>
-					<option>purple</option>
-					<option>grey</option>		
-				</select>
-			</p>
-			<p> Hình dạng
-				<select id="shapee">
-					<option>circle</option>
-					<option>square</option>
-					<option>rectangle</option>
-					<option>triangle</option>
-				</select>
-			</p>
-			<p> Số lượng
-				<select id="numberee">
-					<option>one</option>
-					<option>two</option>
-					<option>three</option>
-					<option>four</option>
-					<option>five</option>
-					<option>six</option>
-					<option>seven</option>
-					<option>eight</option>
-					<option>nine</option>
-					<option>ten</option>
-				</select>
-			</p>
-			<button id="ans"> trả lời</button>
-		</div>
-    </body>
-    <script type="text/javascript" src="tutor3.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Học tiếng Anh</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://tieukhang.github.io/style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sidebar">
+        <a href="https://tieukhang.github.io/">
+        <div style="background-color: #474e59; color: whitesmoke; padding: 20px; font-family: 'Pacifico', cursive; text-align: center;">
+            <!-- <img style="border-radius: 50%; border: 3px solid white;" height="100" src="https://i.pinimg.com/originals/1d/b3/88/1db388f5ad379329887868ea47fa8651.jpg" alt="Avatar"> -->
+            <!-- <br></br> -->
+            <h2>Học tiếng Anh</h2>
+        </div>
+        </a>
+    
+        <div style="margin-top: 10px; text-align: center; color: white;">
+            <h4>---Mục lục---</h4>
+        </div>
+        
+        <ul id="lessonList"></ul>
+            <!-- <li> -->
+                <!-- <a href="#">Home 1</a> -->
+            <!-- </li> -->
+        </ul>
+    </div>
+        
+    <div id="content">
+        <div style="margin-bottom: 10px;">
+            <button id="btntoggle" type="button" class="btn mybtn">Toggle</button>
+        </div>
+        
+        <h1>Từ vựng cơ bản</h1> <br>
+        
+        <div style="width: 300px; border-style: solid; border-width: thin; border-color: black; padding: 10px; margin-bottom: 10px;">
+            <p style="text-align: center; margin-bottom: 2px;">Chuyển hướng</p>
+            <a href="#lecture">1. Bài học</a>
+            <br>
+            <a href="#homework">2. Bài tập</a>
+        </div>
+        
+        <br>
+        
+        <div id="lecture">
+            <h3>Bài học</h3>
+            <hr>
+			<p> <a href="basic color+shape.odp"> Bấm vào đây để học màu sắc + các hình cơ bản</a> </p>
+			<p> <a href="number(1-30).odp"> Bấm vào đây để học cách đếm số trong tiếng anh</a> </p>
+        </div> <br>
+        
+        <div id="homework">
+            <h3>Bài tập</h3>
+            <hr>
+            <iframe src="homework/form3.html" height="400px" width="500px"></iframe> 
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>

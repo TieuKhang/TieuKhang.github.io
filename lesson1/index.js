@@ -14,28 +14,26 @@ document.getElementById("btntoggle").onclick = function() {
 var text, parser, xmlDoc;
 text = "<index>" +
 "<lesson>" +
-"<title>Bảng chữ cái</title>" +
-"<url>https://www.google.com/</url>" +
+"<title>1/ Bảng chữ cái</title>" +
+"<url>https://tieukhang.github.io/lesson1/lesson1.html</url>" +
 "</lesson>" +
 "<lesson>" +
-"<title>Giao tiếp cơ bản</title>" +
-"<url>#</url>" +
+"<title>2/ Giao tiếp cơ bản</title>" +
+"<url>https://tieukhang.github.io/lesson2/lesson2.html</url>" +
 "</lesson>" +
 "<lesson>" +
-"<title>Từ vựng cơ bản</title>" +
-"<url>#</url>" +
+"<title>3/ Từ vựng cơ bản</title>" +
+"<url>https://tieukhang.github.io/lesson3/lesson3.html</url>" +
 "</lesson>" +
 "<lesson>" +
-"<title>Động từ - Tính từ cơ bản</title>" +
-"<url>#</url>" +
+"<title>4/ Động từ - Tính từ cơ bản</title>" +
+"<url>https://tieukhang.github.io/lesson4/lesson4.html</url>" +
 "</lesson>" +
 "</index>";
 
 parser = new DOMParser();
 xmlDoc = parser.parseFromString(text, "text/xml");
-
 var n = xmlDoc.getElementsByTagName("title").length;
-
 for (var i = 0; i < n; ++i) {
     var title = xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue;
     var url = xmlDoc.getElementsByTagName("url")[i].childNodes[0].nodeValue;
