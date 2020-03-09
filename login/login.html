@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Log in page</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div id="errorMessage"></div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="eg.youremail@gmail.com">
+        <button> SUBMIT </button>
+    </div>
+    <script type="text/javascript">
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        }
+        $("button").click(function () {
+            $("#errorMessage").html("");
+            var fieldMissing = "";
+            var errorMessage = "";
+            if ($("#email").val() == "")
+            {
+                fieldMissing += "<p>Email</p>"
+            }
+            if (isEmail($("#email").val()) == false)
+            {
+                errorMessage += "<p> Email is invalid </p>"
+            }
+            console.log(errorMessage);
+            if (fieldMissing != "" || errorMessage != "") {
+                if (fieldMissing != "") {
+                    errorMessage += "<p>These are the missing fields</p>"+ fieldMissing;
+                }   
+                $("#errorMessage").html(errorMessage);
+            }
+        }
+        );
+    </script>
+</body>
+</html>
