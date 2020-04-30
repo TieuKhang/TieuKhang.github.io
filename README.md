@@ -1,2 +1,2 @@
 # TieuKhang.github.io
-Website for tutoring English for Vietnamese kids.
+This is a website for tutoring English for Vietnamese kids. Here is the link : https://tieukhang.github.io/
